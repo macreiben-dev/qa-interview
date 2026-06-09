@@ -6,7 +6,7 @@ The team has just shipped a user registration feature. The backend dev implement
 
 Your goal over the next 90 minutes:
 
-1. **Write a test plan** — list every test case you'd want to cover
+1. **List test you intend to execute** — list test cases you'd want to cover
 2. **Find defects** — run the app and document any bugs you find
 3. **Automate** — write automated tests (unit and/or e2e)
 4. **Ask questions** — flag any requirements you find ambiguous
@@ -61,11 +61,13 @@ Content-Type: application/json
 ```
 
 **Success response** `200 OK`:
+
 ```json
 { "message": "Registration successful." }
 ```
 
 **Validation failure response** `400 Bad Request`:
+
 ```json
 {
   "errors": [
@@ -80,10 +82,20 @@ Content-Type: application/json
 ## Setup
 
 ### Prerequisites
+
 - .NET 8 SDK
 - Node 18+ and Angular CLI (`npm install -g @angular/cli`)
 
+### Docker (alternative)
+
+```bash
+docker compose up --build
+# Frontend available at http://localhost:4200
+# API available at http://localhost:5000
+```
+
 ### Backend
+
 ```bash
 cd backend
 dotnet restore
@@ -92,6 +104,7 @@ dotnet run --project src/PasswordKata.Api
 ```
 
 ### Frontend
+
 ```bash
 cd frontend
 npm install
@@ -100,12 +113,14 @@ ng serve
 ```
 
 ### Run backend tests
+
 ```bash
 cd backend
 dotnet test
 ```
 
 ### Run e2e tests
+
 ```bash
 cd frontend
 npx playwright test
@@ -117,7 +132,7 @@ npx playwright test
 
 By the end of the session, please share:
 
-- [ ] Your test plan (any format — Markdown, spreadsheet, notes)
+- [ ] The tests you intend to execute (any format — Markdown, spreadsheet, notes)
 - [ ] Bug reports for any defects found (one report per bug, with steps to reproduce)
 - [ ] Automated tests you wrote
 - [ ] A list of questions or ambiguities you noticed
@@ -130,3 +145,8 @@ By the end of the session, please share:
 - The backend stores registrations in memory only
 - CORS is pre-configured for `localhost:4200`
 - If something looks wrong, it might be a bug — or it might be intentional design. Either way, document it.
+
+## Credits
+
+- Prompted by [Christian Finel](https://www.linkedin.com/in/christian-finel-88b46461/) with Claude with Claude Code
+- Reviewed by [Rose Lutz](https://www.linkedin.com/in/rose-lutz/)
