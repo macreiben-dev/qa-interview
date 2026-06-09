@@ -1,6 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
-COPY PasswordKata.sln ./
 COPY src/PasswordKata.Api/PasswordKata.Api.csproj src/PasswordKata.Api/
 RUN dotnet restore src/PasswordKata.Api/PasswordKata.Api.csproj
 COPY src/PasswordKata.Api/ src/PasswordKata.Api/
