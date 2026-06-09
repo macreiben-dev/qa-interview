@@ -150,4 +150,4 @@ By the end of the session, please share:
 ## Credits
 
 - Prompted by [Christian Finel](https://www.linkedin.com/in/christian-finel-88b46461/) with Claude with Claude Code
-- Reviewed by [Rose Lutz](https://www.linkedin.com/in/rose-lutz/)
+- Reviewed by an anonymous QA and a glass of wine.
