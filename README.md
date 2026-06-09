@@ -42,6 +42,7 @@ A valid password **must**:
 | Confirm Password | Must match the password exactly |
 
 **Behaviour:**
+
 - The Submit button must be disabled until all fields are valid
 - On successful registration: display a success message
 - On failure: display all validation errors clearly
