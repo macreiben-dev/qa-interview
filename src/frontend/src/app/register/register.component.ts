@@ -83,7 +83,7 @@ export class RegisterComponent implements OnInit {
     // If the user fills in confirmPassword first and then changes the password,
     // the mismatch is never re-evaluated and no error is shown.
     this.registerForm.get('confirmPassword')!.valueChanges.subscribe(() => {
-      this.registerForm.get('confirmPassword')!.updateValueAndValidity({ onlySelf: true });
+      this.registerForm.get('confirmPassword')!.updateValueAndValidity({ onlySelf: true, emitEvent: false });
     });
   }
 

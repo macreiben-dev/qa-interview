@@ -21,7 +21,7 @@ Single-page Angular 17 standalone app. There is no routing — `AppComponent` is
 **Data flow:**
 1. `RegisterComponent` owns a reactive form (`FormGroup`) with three controls: `username`, `password`, `confirmPassword`.
 2. Two custom validators run at form level: `passwordRulesValidator` (per-field, 8 rules) and `passwordsMatchValidator` (cross-field group validator).
-3. On submit, `AuthService.register()` POSTs to `http://localhost:5001/api/auth/register` and returns an observable of `RegisterResponse | null`.
+3. On submit, `AuthService.register()` POSTs to `http://localhost:5000/api/auth/register` and returns an observable of `RegisterResponse | null`.
 4. The template drives all error display via `*ngIf` on `control.errors` and `hasPasswordError(code)`.
 
 **Known intentional bugs** (this is a QA kata — do not fix these unless asked):
