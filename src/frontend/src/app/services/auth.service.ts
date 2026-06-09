@@ -15,7 +15,7 @@ export interface RegisterResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private readonly apiUrl = 'http://localhost:5001/api/auth';
+  private readonly apiUrl = 'http://localhost:5000/api/auth';
 
   constructor(private http: HttpClient) {}
 
